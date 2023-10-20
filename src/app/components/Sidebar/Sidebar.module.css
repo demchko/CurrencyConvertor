@@ -1,0 +1,16 @@
+.sidebar{
+    background-color: #6674d7;
+    width: 20%;
+    color: white;
+}
+
+.logo{
+    text-align: center;
+    margin-top: 15%;
+}
+
+.menu{
+    font-size: 20px;
+    margin-top: 10%;
+    margin-left: 21%;
+}
