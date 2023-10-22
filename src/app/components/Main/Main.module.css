@@ -1,0 +1,30 @@
+.title{
+    font-weight: bold;
+}
+
+.gridBlock{
+    background-color: white;
+    padding: 1%;
+    margin-top: 10px;
+    border-radius: 15px;
+    width: 70%;
+}
+
+.block{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.country{
+    display: flex;
+    align-items: center;
+}
+
+
+.block img{
+    width: 7%;
+    border: 1px solid black;
+    margin-right: 10px;
+}

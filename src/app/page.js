@@ -1,6 +1,7 @@
 import style from './page.module.css';
 import Sidebar from "@/app/components/Sidebar/Sidebar";
 import Header from "@/app/components/Header/Header";
+import Main from "@/app/components/Main/Main";
 
 export default function Home() {
   return (
@@ -9,7 +10,7 @@ export default function Home() {
           <div style={{width: '80%'}} >
               <Header />
               <div className={style.mainBlock} >
-                  sdflksdf
+                  <Main />
               </div>
           </div>
       </div>

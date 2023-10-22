@@ -1,7 +1,8 @@
 'use client'
 
 import style from './Sidebar.module.css';
-import {useState} from "react";
+import {useEffect, useState} from "react";
+import axios from "axios";
 
 const Sidebar = () => {
 
