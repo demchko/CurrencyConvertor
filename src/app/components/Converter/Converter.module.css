@@ -1,0 +1,54 @@
+.title{
+    font-weight: bold;
+}
+
+.converter{
+    background-color: white;
+    padding: 1%;
+    margin-top: 10px;
+    border-radius: 15px;
+    width: 40%;
+}
+
+.block{
+    display: flex;
+    justify-content: space-between;
+}
+
+.converter input{
+    background-color: white;
+    border: 1px solid #6674d7;
+    border-radius: 15px;
+    padding: 3%;
+}
+
+.converter select{
+    width: 39%;
+    background-color: white;
+    color: black;
+    border: 1px solid #6674d7;
+    border-radius: 15px;
+    padding: 3%;
+}
+
+.converter option{
+    background-color: white;
+    color: black;
+}
+
+.inputAmount{
+    width: 60%;
+    color: black;
+}
+
+.inputAmount:focus{
+    outline: none;
+    border: 2px solid #6674d7;
+}
+
+.arrows{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    color: #6674d7;
+}

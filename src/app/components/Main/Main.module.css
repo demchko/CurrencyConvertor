@@ -1,5 +1,14 @@
+.container{
+    display: flex;
+    justify-content: space-between;
+}
+
 .title{
     font-weight: bold;
+}
+
+.exchangeBlock{
+    width: 60%;
 }
 
 .gridBlock{
@@ -7,7 +16,7 @@
     padding: 1%;
     margin-top: 10px;
     border-radius: 15px;
-    width: 70%;
+    width: 100%;
 }
 
 .block{
@@ -27,4 +36,16 @@
     width: 7%;
     border: 1px solid black;
     margin-right: 10px;
+}
+
+.currencyBlock{
+    width: 35%;
+}
+
+.currencyNews{
+    background-color: white;
+    padding: 5%;
+    margin-top: 10px;
+    border-radius: 15px;
+    font-size: 16px;
 }
