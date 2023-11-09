@@ -3,21 +3,16 @@
 import React, {useEffect, useState} from 'react';
 import style from './Converter.module.css';
 import axios from "axios";
+import ConverterBlock from "@/app/components/Converter/ConverterBlock";
+import AddToFav from "@/app/components/Converter/AddToFav";
 
 const Converter = () => {
 
     const [currency, setCurrency] = useState([]);
-    const [convertFrom, setConvertFrom] = useState('');
     const [numberFrom, setNumberFrom] = useState(0);
     const [numberTo, setNumberTo] = useState(0);
+    const [convertFrom, setConvertFrom] = useState('');
     const [convertTo, setConvertTo] = useState('');
-
-    const handleChange = () => {
-        setNumberTo(numberFrom);
-        setNumberFrom(numberTo);
-        setConvertFrom(convertTo);
-        setConvertTo(convertFrom);
-    }
 
     useEffect(() => {
         const fetchData = async() => {
@@ -42,37 +37,19 @@ const Converter = () => {
     }, [numberFrom])
 
     return (
-        <div>
-            <p className={style.title} >Converter</p>
-            <div className={style.converter} >
-                <div className={style.block} >
-                    <select value={convertFrom} onChange={e => setConvertFrom(e.target.value)} >
-                        {
-                            currency.map(item => (
-                                <option key={item.key} >{item.key}: {item.value}</option>
-                            ))
-                        }
-                    </select>
-                    <input value={numberFrom} onChange={e => setNumberFrom(e.target.value)} placeholder='type amount..' type='number' className={style.inputAmount} />
-                </div>
-                <div style={{cursor: 'pointer'}} className={style.arrows} onClick={() => handleChange()} >
-                    <p>↑</p>
-                    <p style={{marginLeft: '-5px'}} >↓</p>
-                </div>
-                <div className={style.block} >
-                    <select value={convertTo} onChange={e => setConvertTo(e.target.value)}  >
-                        {
-                            currency.map(item => (
-                                <option key={item.key} >{item.key}: {item.value}</option>
-                            ))
-                        }
-                    </select>
-                    <input disabled={true} value={
-                        numberFrom
-                        ? numberTo
-                        : 0
-                    } onChange={e => setNumberTo(e.target.value)} placeholder='type amount..' type='number' className={style.inputAmount} />
-                </div>
+        <div className={style.main} >
+            <div className={style.converterBlock} >
+                <p className={style.title} >Converter</p>
+                <ConverterBlock currency={currency} numberFrom={numberFrom}
+                                numberTo={numberTo} setNumberFrom={setNumberFrom}
+                                setNumberTo={setNumberTo} convertTo={convertTo}
+                                convertFrom={convertFrom} setConvertFrom={setConvertFrom}
+                                setConvertTo={setConvertTo}
+                />
+            </div>
+            <div className={style.addToFavBlock} >
+                <p className={style.title} >Add Currency To Fav</p>
+                <AddToFav currency={currency} />
             </div>
         </div>
     );

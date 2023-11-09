@@ -1,3 +1,16 @@
+.main{
+    display: flex;
+    justify-content: space-between;
+}
+
+.converterBlock{
+    width: 45%;
+}
+
+.addToFavBlock{
+    width: 45%;
+}
+
 .title{
     font-weight: bold;
 }
@@ -7,7 +20,7 @@
     padding: 1%;
     margin-top: 10px;
     border-radius: 15px;
-    width: 40%;
+    width: 100%;
 }
 
 .block{
@@ -51,4 +64,24 @@
     text-align: center;
     justify-content: center;
     color: #6674d7;
+}
+
+.favBlock{
+    background-color: white;
+    padding: 2%;
+    border-radius: 15px;
+}
+
+.favBlock select{
+    width: 100%;
+    background-color: white;
+    color: black;
+    border: 1px solid #6674d7;
+    border-radius: 15px;
+    padding: 3%;
+}
+
+.favBlock option{
+    background-color: white;
+    color: black;
 }

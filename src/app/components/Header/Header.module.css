@@ -31,4 +31,11 @@
 
 .user img{
     width: 20%;
+    border-radius: 100%;
+}
+
+.notAvatar{
+    width: 20%;
+    border-radius: 100%;
+    background-color: #6674d7;
 }
