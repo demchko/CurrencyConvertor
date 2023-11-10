@@ -23,7 +23,6 @@ const Main = () => {
     useEffect(() => {
         const fetchData = async() => {
             const response = await axios.get(`https://api.getgeoapi.com/v2/currency/historical/${formattedDate}?api_key=cc5083ab40333e6f4970cf959c5e1f114a5a81bd`);
-            console.log(response);
             setRates(Object.values(response.data.rates).filter(item => item.currency_name === 'Polish złoty'
                 || item.currency_name === 'United States dollar'
                 || item.currency_name === 'Ukrainian hryvnia'
@@ -33,8 +32,6 @@ const Main = () => {
         }
         fetchData();
     }, []);
-
-    console.log(rates);
 
     const getImg = item => {
         if(item?.currency_name === 'Ukrainian hryvnia'){
