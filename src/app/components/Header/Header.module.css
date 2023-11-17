@@ -39,3 +39,16 @@
     border-radius: 100%;
     background-color: #6674d7;
 }
+
+.signButton{
+    background-color: #6674d7;
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.signButton:hover{
+    cursor: pointer;
+    box-shadow: 2px 2px 2px black;
+}
+

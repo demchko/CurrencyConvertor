@@ -1,24 +1,29 @@
+'use client';
+
 import style from '../page.module.css';
 import Sidebar from "@/app/components/Sidebar/Sidebar";
 import Header from "@/app/components/Header/Header";
-import Main from "@/app/components/Main/Main";
-import Converter from "@/app/components/Converter/Converter";
-import {getServerSession} from "next-auth/next";
-import {authConfig} from "../../../configs/auth";
+import {useSession} from "next-auth/react";
+import React from "react";
 
-export default async function Profile() {
 
-    const session = await getServerSession(authConfig);
+export default function Profile() {
 
-    console.log(session);
+    const session = useSession();
 
     return (
         <div className={style.wrapper} >
             <Sidebar />
             <div style={{width: '80%'}} >
                 <Header />
-                <div className={style.mainBlock} >
-                    <p>Profile {session?.user?.name}</p>
+                <div>
+                    <p>Profile</p>
+                    <p>{session?.data?.user?.name}</p>
+                    <div style={{display: 'flex', alignItems: 'center'}} >
+                        {
+                            session?.data?.user?.image && <img style={{width: '30%'}} src={session?.data?.user?.image} />
+                        }
+                    </div>
                 </div>
             </div>
         </div>
