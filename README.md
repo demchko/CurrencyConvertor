@@ -5,6 +5,7 @@ Main Page
 - [X] Main Page
 - [X] Converter 
 - [ ] Favourite currency
+- [ ] Phone adapting
 
 Credentials for users
 <img width="350" alt="image" src="https://github.com/demchko/CurrencyConvertor/assets/79476755/5820b1a0-a9dd-4d3f-b954-5f3f7d58a932">
